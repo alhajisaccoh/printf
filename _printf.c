@@ -46,10 +46,10 @@ int _printf(const char *format, ...)
 					count += _putchar_ptr(va_arg(args, void *));
 					break;
 				case 'r':
-					count += _putchar_str_reverse(va_arg(args, char *));
+					count += _putstr(va_arg(args, char *));
 					break;
 				default:
-					count += _putchar('%') + _putchar(*format);
+					count +=  _putchar(*format);
 					break;
 			}
 		}
